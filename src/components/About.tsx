@@ -1,5 +1,4 @@
-import React from 'react';
-import { Handshake, Eye, Heart, Zap } from 'lucide-react';
+import { Handshake, Eye, Heart, Zap } from "lucide-react";
 
 const About = () => {
   return (
@@ -11,7 +10,7 @@ const About = () => {
             Our Story
           </h1>
           <p className="text-gray-400 text-lg">
-            Transforming ideas into impactful solutions since 2018
+            We transform ideas into impactful solutions.
           </p>
         </div>
 
@@ -32,19 +31,21 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-gray-400">
               <p>
-                At Woolgar Media, we believe in the transformative power of technology
-                to solve complex business challenges and drive innovation.
+                At Woolgar Media, we believe in the transformative power of
+                technology to solve complex business challenges and drive
+                innovation.
               </p>
               <p>
-                Our journey began with a vision to help businesses navigate the
-                digital landscape with confidence and purpose. Today, we're proud
-                to be a team of passionate technologists, bringing together experts
-                in development, design, and strategy.
+                We also understand the struggle for small businesses to navigate
+                the digital landscape. That's why we're committed to providing
+                expert guidance and support to help you succeed. We bring
+                together expertise in development, design, and marketing to
+                provide you with the best results.
               </p>
               <p>
-                We're committed to delivering excellence in every project,
-                combining technical expertise with creative innovation to create
-                solutions that make a real difference.
+                Our mission is to delivere excellence in every project, combine
+                technical expertise with creative innovation, and to create
+                solutions that make a real difference to your business.
               </p>
             </div>
           </div>
@@ -59,34 +60,33 @@ const About = () => {
             {[
               {
                 icon: <Handshake size={40} className="text-blue-500" />,
-                title: 'Ethics',
+                title: "Ethics",
                 description:
-                  'We conduct business with unwavering integrity and transparency',
+                  "We conduct business with unwavering integrity and transparency",
               },
               {
                 icon: <Eye size={40} className="text-blue-500" />,
-                title: 'Vision',
+                title: "Vision",
                 description:
-                  'We look beyond todays challenges to create tomorrows solutions',
+                  "We look beyond todays challenges to create tomorrows solutions",
               },
               {
                 icon: <Heart size={40} className="text-blue-500" />,
-                title: 'Passion',
+                title: "Passion",
                 description:
-                  'Were driven by our love for technology and problem-solving',
+                  "Were driven by our love for technology and problem-solving",
               },
               {
                 icon: <Zap size={40} className="text-blue-500" />,
-                title: 'Impact',
+                title: "Impact",
                 description:
-                  'We measure success by the real difference we make in peoples lives',
+                  "We measure success by the real difference we make in peoples lives",
               },
             ].map((value, index) => (
               <div
                 key={index}
                 className="p-6 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50
-                         transform hover:scale-105 transition-all duration-300 group"
-              >
+                         transform hover:scale-105 transition-all duration-300 group">
                 <div className="mb-4 transform group-hover:-rotate-6 transition-transform duration-300">
                   {value.icon}
                 </div>
@@ -100,29 +100,28 @@ const About = () => {
         </div>
 
         {/* Expertise Section */}
-        <div>
+        {/* <div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Our Expertise
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Software Development',
-                items: ['Custom Solutions', 'Web Applications', 'Mobile Apps'],
+                title: "Software Development",
+                items: ["Custom Solutions", "Web Applications", "Mobile Apps"],
               },
               {
-                title: 'Industry Focus',
-                items: ['E-commerce', 'Healthcare', 'Finance'],
+                title: "Industry Focus",
+                items: ["E-commerce", "Healthcare", "Finance"],
               },
               {
-                title: 'Technical Excellence',
-                items: ['Quality Assurance', 'Best Practices', 'Security'],
+                title: "Technical Excellence",
+                items: ["Quality Assurance", "Best Practices", "Security"],
               },
             ].map((category, index) => (
               <div
                 key={index}
-                className="p-6 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50"
-              >
+                className="p-6 bg-gray-800/50 rounded-xl backdrop-blur-sm border border-gray-700/50">
                 <h3 className="text-xl font-semibold text-white mb-4">
                   {category.title}
                 </h3>
@@ -130,8 +129,7 @@ const About = () => {
                   {category.items.map((item, itemIndex) => (
                     <li
                       key={itemIndex}
-                      className="flex items-center text-gray-400"
-                    >
+                      className="flex items-center text-gray-400">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-2" />
                       {item}
                     </li>
@@ -140,7 +138,7 @@ const About = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

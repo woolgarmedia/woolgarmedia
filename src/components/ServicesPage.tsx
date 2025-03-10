@@ -1,55 +1,49 @@
-import React from 'react';
-import { Globe, Search, Share2, BarChart3, ArrowRight } from 'lucide-react';
+import React from "react";
+import { Globe, Search, Share2, BarChart3, ArrowRight } from "lucide-react";
 
 const services = [
   {
     icon: <Globe size={40} className="text-blue-500" />,
     title: "Professional Website Design & Development",
-    description: "Custom-built, SEO-optimized websites that drive results for Oxfordshire businesses.",
+    description:
+      "Custom-built, SEO-optimized websites that drive results for Oxfordshire businesses.",
     features: [
       "Responsive Web Design",
       "E-commerce Solutions",
       "Custom CMS Integration",
-      "Performance Optimization"
+      "Performance Optimization",
     ],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2426&q=80"
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2426&q=80",
   },
   {
     icon: <Search size={40} className="text-blue-500" />,
     title: "Affordable SEO Services",
-    description: "Results-driven SEO strategies to improve your search rankings and drive organic traffic.",
+    description:
+      "Results-driven SEO strategies to improve your search rankings and drive organic traffic.",
     features: [
       "Local SEO Optimization",
       "Keyword Research & Strategy",
       "Technical SEO Audits",
-      "Content Optimization"
+      "Content Optimization",
     ],
-    image: "https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
+    image:
+      "https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
   },
   {
     icon: <Share2 size={40} className="text-blue-500" />,
     title: "Social Media Marketing",
-    description: "Strategic social media management to build brand presence and engage your target audience.",
+    description:
+      "Strategic social media management to build brand presence and engage your target audience.",
     features: [
       "Content Strategy & Creation",
       "Community Management",
       "Social Media Analytics",
-      "Paid Social Campaigns"
+      "Paid Social Campaigns",
     ],
-    image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
+    image:
+      "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
   },
-  {
-    icon: <BarChart3 size={40} className="text-blue-500" />,
-    title: "Digital Marketing Solutions",
-    description: "Comprehensive digital marketing strategies for small business success in Oxfordshire.",
-    features: [
-      "PPC Campaign Management",
-      "Email Marketing",
-      "Content Marketing",
-      "Analytics & Reporting"
-    ],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
-  }
 ];
 
 const ServicesPage = () => {
@@ -59,10 +53,12 @@ const ServicesPage = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Digital Marketing & <span className="gradient-text">SEO Services</span>
+            Digital Marketing &{" "}
+            <span className="gradient-text">SEO Services</span>
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Affordable digital marketing solutions and SEO services tailored for small businesses in Oxfordshire
+            Affordable digital marketing solutions and SEO services tailored for
+            small businesses in Oxfordshire
           </p>
         </div>
 
@@ -72,9 +68,8 @@ const ServicesPage = () => {
             <div
               key={index}
               className={`flex flex-col lg:flex-row gap-8 items-center ${
-                index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-              }`}
-            >
+                index % 2 === 1 ? "lg:flex-row-reverse" : ""
+              }`}>
               <div className="lg:w-1/2">
                 <div className="relative group">
                   <div className="absolute inset-0 bg-blue-500 opacity-10 rounded-xl group-hover:opacity-20 transition-opacity duration-300" />
@@ -85,29 +80,29 @@ const ServicesPage = () => {
                   />
                 </div>
               </div>
-              
+
               <div className="lg:w-1/2 space-y-6">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-500/10 mb-4">
                   {service.icon}
                 </div>
-                
+
                 <h2 className="text-3xl font-bold text-white">
                   {service.title}
                 </h2>
-                
-                <p className="text-gray-400 text-lg">
-                  {service.description}
-                </p>
-                
+
+                <p className="text-gray-400 text-lg">{service.description}</p>
+
                 <ul className="space-y-3">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-gray-300">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-3" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                
+
                 <button className="gradient-button text-white px-6 py-3 rounded-full text-sm font-medium inline-flex items-center gap-2">
                   Learn More
                   <ArrowRight size={16} />
@@ -123,7 +118,8 @@ const ServicesPage = () => {
             Ready to Grow Your Online Presence?
           </h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Get started with our affordable SEO services and digital marketing solutions today
+            Get started with our affordable SEO services and digital marketing
+            solutions today
           </p>
           <button className="gradient-button text-white px-8 py-4 rounded-full text-lg font-medium inline-flex items-center gap-2">
             Get Your Free SEO Audit

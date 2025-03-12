@@ -22,7 +22,7 @@ const Navbar = () => {
   const navItems = [
     { name: "HOME", href: "/" },
     { name: "ABOUT", href: "/about" },
-    { name: "SUCCESS STORIES", href: "/success-stories" },
+    // { name: "SUCCESS STORIES", href: "/success-stories" },
     { name: "PROJECTS", href: "/projects" },
     { name: "SERVICES", href: "/services" },
     { name: "CONTACT", href: "/#contact", onClick: handleContactClick },

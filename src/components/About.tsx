@@ -19,7 +19,7 @@ const About = () => {
           <div className="relative">
             <div className="rounded-lg overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
+                src="/images/IMG-20231201-WA0013.jpg"
                 alt="Team collaboration"
                 className="w-full h-[400px] object-cover"
               />

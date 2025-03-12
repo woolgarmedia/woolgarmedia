@@ -17,6 +17,7 @@ import About from "./components/About";
 import ScrollToTop from "./components/ScrollToTop";
 import ServicesPage from "./components/ServicesPage";
 import { setPageTitle } from "./utils/title";
+import Projects from "./components/Projects";
 
 function AppContent() {
   const location = useLocation();
@@ -52,6 +53,7 @@ function AppContent() {
         />
         <Route path="/about" element={<About />} />
         <Route path="/success-stories" element={<SuccessStories />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/success-stories/:id" element={<StoryDetail />} />
         <Route path="/services" element={<ServicesPage />} />
       </Routes>

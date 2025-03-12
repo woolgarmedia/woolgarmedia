@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Menu, X, Code } from 'lucide-react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { Menu, X, Code } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,20 +9,23 @@ const Navbar = () => {
 
   const handleContactClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    if (location.pathname !== '/') {
-      navigate('/', { state: { scrollToContact: true } });
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollToContact: true } });
     } else {
-      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+      document
+        .getElementById("contact")
+        ?.scrollIntoView({ behavior: "smooth" });
     }
     setIsOpen(false);
   };
 
   const navItems = [
-    { name: 'HOME', href: '/' },
-    { name: 'ABOUT', href: '/about' },
-    { name: 'SUCCESS STORIES', href: '/success-stories' },
-    { name: 'SERVICES', href: '/services' },
-    { name: 'CONTACT', href: '/#contact', onClick: handleContactClick },
+    { name: "HOME", href: "/" },
+    { name: "ABOUT", href: "/about" },
+    { name: "SUCCESS STORIES", href: "/success-stories" },
+    { name: "PROJECTS", href: "/projects" },
+    { name: "SERVICES", href: "/services" },
+    { name: "CONTACT", href: "/#contact", onClick: handleContactClick },
   ];
 
   return (
@@ -44,10 +47,9 @@ const Navbar = () => {
                   onClick={item.onClick}
                   className={`text-sm ${
                     location.pathname === item.href
-                      ? 'text-white'
-                      : 'text-gray-300 hover:text-white'
-                  } transition-colors duration-200`}
-                >
+                      ? "text-white"
+                      : "text-gray-300 hover:text-white"
+                  } transition-colors duration-200`}>
                   {item.name}
                 </Link>
               ))}
@@ -58,8 +60,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white"
-            >
+              className="text-gray-300 hover:text-white">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -77,10 +78,9 @@ const Navbar = () => {
                 onClick={item.onClick}
                 className={`block px-3 py-2 ${
                   location.pathname === item.href
-                    ? 'text-white'
-                    : 'text-gray-300 hover:text-white'
-                } text-sm`}
-              >
+                    ? "text-white"
+                    : "text-gray-300 hover:text-white"
+                } text-sm`}>
                 {item.name}
               </Link>
             ))}
@@ -91,4 +91,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar
+export default Navbar;

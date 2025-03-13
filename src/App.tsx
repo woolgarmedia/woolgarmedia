@@ -18,6 +18,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import ServicesPage from "./components/ServicesPage";
 import { setPageTitle } from "./utils/title";
 import Projects from "./components/Projects";
+import SEO from "./components/SEO";
 
 function AppContent() {
   const location = useLocation();
@@ -37,28 +38,35 @@ function AppContent() {
   }, [location]);
 
   return (
-    <div className="min-h-screen bg-gray-900">
-      <Navbar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero />
-              <Services />
-              <WhyChooseUs />
-              <Contact />
-            </>
-          }
-        />
-        <Route path="/about" element={<About />} />
-        <Route path="/success-stories" element={<SuccessStories />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/success-stories/:id" element={<StoryDetail />} />
-        <Route path="/services" element={<ServicesPage />} />
-      </Routes>
-      <Footer />
-    </div>
+    <>
+      <SEO
+        title="Home"
+        description="Woolgar Media, your digital marketing partner for web development, social media marketing, and content creation."
+        url="https://woolgarmedia.com/"
+      />
+      <div className="min-h-screen bg-gray-900">
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <Services />
+                <WhyChooseUs />
+                <Contact />
+              </>
+            }
+          />
+          <Route path="/about" element={<About />} />
+          <Route path="/success-stories" element={<SuccessStories />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/success-stories/:id" element={<StoryDetail />} />
+          <Route path="/services" element={<ServicesPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </>
   );
 }
 

@@ -1,3 +1,5 @@
+import SEO from "./SEO";
+
 interface Project {
   id: string;
   category: string;
@@ -57,18 +59,25 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
 const Projects = () => {
   return (
-    <div className="min-h-screen">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="mb-12 text-center text-4xl font-bold text-gray-900">
-          My Projects
-        </h1>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projectsData.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
+    <>
+      <SEO
+        title="Projects"
+        description="Projects from Woolgar Media, your digital marketing partner for web development, social media marketing, and content creation."
+        url="https://woolgarmedia.com/projects"
+      />
+      <div className="min-h-screen">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="mb-12 text-center text-4xl font-bold text-gray-900">
+            My Projects
+          </h1>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {projectsData.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

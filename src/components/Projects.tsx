@@ -11,21 +11,24 @@ const projectsData: Project[] = [
     id: "1",
     category: "Web Development",
     title: "Diesel Vehicle Services",
-    description: "",
+    description:
+      "Designed and developed a professional website for Diesel Vehicle Services, a local mechanics business, to enhance their online presence and make it easy for customers to get in touch and book.",
     image: "/images/dvs-1.png",
   },
   {
     id: "2",
     category: "Web Development",
     title: "L&M Diamond Cutting Services",
-    description: "",
+    description:
+      "Built a sleek and responsive website for L&M Diamond Cutting Services, helping them attract new clients with clear service offerings and an easy-to-use contact form.",
     image: "/images/lmdcs-project.png",
   },
   {
     id: "3",
     category: "Web Development",
     title: "Jackson's Paintings",
-    description: "",
+    description:
+      "Developed a professional website for Jackson’s Paintings, a painter and decorator specializing in internal and external projects, making it easy for customers to view previous projects and request quotes.",
     image: "/images/jacksons-paintings-project.png",
   },
 ];

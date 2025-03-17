@@ -45,12 +45,18 @@ const Navbar = () => {
                   key={item.name}
                   to={item.href}
                   onClick={item.onClick}
-                  className={`text-sm ${
+                  className={`text-sm relative group ${
                     location.pathname === item.href
                       ? "text-white"
                       : "text-gray-300 hover:text-white"
                   } transition-colors duration-200`}>
-                  {item.name}
+                  <span className="block transform transition-transform duration-200 group-hover:scale-105">
+                    {item.name}
+                  </span>
+                  <span
+                    className={`absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full ${
+                      location.pathname === item.href ? "w-full" : ""
+                    }`}></span>
                 </Link>
               ))}
             </div>
@@ -81,7 +87,13 @@ const Navbar = () => {
                     ? "text-white"
                     : "text-gray-300 hover:text-white"
                 } text-sm`}>
-                {item.name}
+                <span className="block transform transition-transform duration-200 group-hover:scale-105">
+                  {item.name}
+                </span>
+                <span
+                  className={`absolute bottom-0 left-3 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-[calc(100%-24px)] ${
+                    location.pathname === item.href ? "w-[calc(100%-24px)]" : ""
+                  }`}></span>
               </Link>
             ))}
           </div>

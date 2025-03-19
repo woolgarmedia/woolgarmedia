@@ -1,0 +1,7 @@
+# Netlify configuration file
+
+# This redirect rule ensures that all paths are handled by the SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

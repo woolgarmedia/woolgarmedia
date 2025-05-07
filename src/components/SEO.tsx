@@ -10,10 +10,10 @@ interface SEOProps {
 
 export default function SEO({
   title = "Woolgar Media",
-  description = "Digital marketing agency specializing in web development, social media marketing, and content creation.",
+  description = "Professional web development agency specializing in custom website design, e-commerce solutions, and ongoing support for small businesses in Oxfordshire.",
   ogImage = "/images/og-image.png",
   url = "https://woolgarmedia.com",
-  keywords = "digital marketing, web development, social media marketing",
+  keywords = "web development, website design, e-commerce, small business websites",
 }: SEOProps) {
   const fullTitle =
     title === "Woolgar Media" ? title : `${title} | Woolgar Media`;

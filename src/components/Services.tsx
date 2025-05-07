@@ -6,17 +6,17 @@ const services = [
   {
     icon: <Globe size={40} className="text-blue-500" />,
     title: 'Professional Website Design',
-    description: 'Custom-built, SEO-optimized websites that drive results for Oxfordshire businesses.',
-  },
-  {
-    icon: <Search size={40} className="text-blue-500" />,
-    title: 'Affordable SEO Services',
-    description: 'Data-driven SEO strategies to improve your search rankings and online visibility.',
+    description: 'Custom-built, modern websites that help Oxfordshire businesses establish a strong online presence.',
   },
   {
     icon: <Share2 size={40} className="text-blue-500" />,
-    title: 'Social Media Marketing',
-    description: 'Engaging social media campaigns that connect with your target audience and drive growth.',
+    title: 'Website Maintenance',
+    description: 'Ongoing support and maintenance to keep your website running smoothly and securely.',
+  },
+  {
+    icon: <BarChart3 size={40} className="text-blue-500" />,
+    title: 'E-commerce Solutions',
+    description: 'Custom online stores and shopping experiences that drive sales and growth.',
   },
 ];
 
@@ -29,7 +29,7 @@ const Services = () => {
             Our <span className="gradient-text">Services</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Affordable digital marketing solutions and SEO services designed to help small businesses in Oxfordshire thrive online.
+            Professional web development services designed to help small businesses in Oxfordshire establish a strong online presence.
           </p>
         </div>
 

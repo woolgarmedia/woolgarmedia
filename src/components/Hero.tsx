@@ -18,25 +18,22 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 text-center lg:text-left">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 text-sm mb-6">
-              🚀 Affordable Digital Marketing Solutions in Oxfordshire
+              🚀 Professional Web Development in Oxfordshire
             </div>
 
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-white">
               Expert Website Design &{" "}
-              <span className="gradient-text">SEO Services</span>
+              <span className="gradient-text">Development</span>
               <br />
               for Small Businesses
             </h1>
 
             <p className="text-lg text-gray-400 mb-8 max-w-2xl">
-              Transform your small business with our affordable SEO services and
-              professional website development. Based in Oxfordshire, we deliver
-              results-driven digital marketing solutions that help local
-              businesses grow online.
+              Transform your small business with our professional website development services. Based in Oxfordshire, we create custom, modern websites that help local businesses establish a strong online presence.
             </p>
 
             <button className="gradient-button text-white px-8 py-4 rounded-full text-lg font-medium flex items-center gap-2 shadow-lg">
-              Get Your Free SEO Audit
+              Get Your Free Website Consultation
               <ArrowRight size={20} />
             </button>
 
@@ -48,7 +45,7 @@ const Hero = () => {
               <div>
                 <div className="text-blue-500 text-3xl font-bold">#1</div>
                 <div className="text-gray-400 text-sm">
-                  Trust Digital Marketing Agency Oxfordshire
+                  Trust Web Development Agency Oxfordshire
                 </div>
               </div>
             </div>

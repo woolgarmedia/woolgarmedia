@@ -10,7 +10,7 @@ const WhyChooseUs = () => {
             Why Choose <span className="gradient-text">Woolgar Media</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Your trusted partner for affordable SEO services and website development in Oxfordshire. We help small businesses achieve exceptional results through data-driven digital marketing strategies.
+            Your trusted partner for professional website development in Oxfordshire. We help small businesses establish a strong online presence through custom, modern websites.
           </p>
         </div>
 
@@ -18,28 +18,28 @@ const WhyChooseUs = () => {
           {[
             {
               icon: <Target size={40} className="text-blue-500" />,
-              title: "Results-Driven Approach",
-              description: "Our digital marketing strategies are focused on delivering measurable results and ROI for your small business."
+              title: "Custom Solutions",
+              description: "Tailored website development that meets your specific business needs and goals."
             },
             {
               icon: <Award size={40} className="text-blue-500" />,
-              title: "Local SEO Experts",
-              description: "Specialized in helping Oxfordshire businesses improve their local search rankings and online visibility."
+              title: "Modern Technology",
+              description: "Built with the latest web technologies for optimal performance and user experience."
             },
             {
               icon: <Users size={40} className="text-blue-500" />,
-              title: "Dedicated Support Team",
-              description: "Personal attention and regular updates from our experienced digital marketing professionals."
+              title: "Dedicated Support",
+              description: "Personal attention and ongoing support from our experienced development team."
             },
             {
               icon: <Rocket size={40} className="text-blue-500" />,
-              title: "Affordable Solutions",
-              description: "Cost-effective SEO services and website development packages tailored for small businesses."
+              title: "Fast Delivery",
+              description: "Quick turnaround on website development projects without compromising quality."
             },
             {
-              icon: <Clock size={40} className="text-blue-500" />,
-              title: "Timely Delivery",
-              description: "Quick turnaround on website development projects without compromising on quality."
+              icon: <Shield size={40} className="text-blue-500" />,
+              title: "Secure & Reliable",
+              description: "Built with security in mind and backed by reliable hosting solutions."
             }
           ].map((feature, index) => (
             <div

@@ -2,6 +2,7 @@ import React from "react";
 import { Globe, Search, Share2, BarChart3, ArrowRight } from "lucide-react";
 import SEO from "./SEO";
 import { Link } from "react-router-dom";
+import FadeInSection from "./FadeInSection";
 
 const services = [
   {
@@ -45,76 +46,81 @@ const ServicesPage = () => {
       <section className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Professional <span className="gradient-text">Web Development</span> Services
-            </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Custom website development solutions tailored for small businesses in Oxfordshire
-            </p>
-          </div>
+          <FadeInSection>
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                Professional <span className="gradient-text">Web Development</span> Services
+              </h1>
+              <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                Custom website development solutions tailored for small businesses in Oxfordshire
+              </p>
+            </div>
+          </FadeInSection>
 
           {/* Services Grid */}
           <div className="space-y-16">
             {services.map((service, index) => (
-              <div
-                key={index}
-                className={`flex flex-col lg:flex-row gap-8 items-center ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}>
-                <div className="lg:w-1/2">
-                  <div className="relative group">
-                    <div className="absolute inset-0 bg-blue-500 opacity-10 rounded-xl group-hover:opacity-20 transition-opacity duration-300" />
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="rounded-xl shadow-2xl w-full h-[300px] object-cover"
-                    />
-                  </div>
-                </div>
-
-                <div className="lg:w-1/2 space-y-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-500/10 mb-4">
-                    {service.icon}
+              <FadeInSection key={index} delay={200 * (index + 1)}>
+                <div
+                  className={`flex flex-col lg:flex-row gap-8 items-center ${
+                    index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                  }`}>
+                  <div className="lg:w-1/2">
+                    <div className="relative group">
+                      <div className="absolute inset-0 bg-blue-500 opacity-10 rounded-xl group-hover:opacity-20 transition-opacity duration-300" />
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="rounded-xl shadow-2xl w-full h-[300px] object-cover"
+                      />
+                    </div>
                   </div>
 
-                  <h2 className="text-3xl font-bold text-white">
-                    {service.title}
-                  </h2>
+                  <div className="lg:w-1/2 space-y-6">
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-500/10 mb-4">
+                      {service.icon}
+                    </div>
 
-                  <p className="text-gray-400 text-lg">{service.description}</p>
+                    <h2 className="text-3xl font-bold text-white">
+                      {service.title}
+                    </h2>
 
-                  <ul className="space-y-3">
-                    {service.features.map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className="flex items-center text-gray-300">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                    <p className="text-gray-400 text-lg">{service.description}</p>
+
+                    <ul className="space-y-3">
+                      {service.features.map((feature, featureIndex) => (
+                        <li
+                          key={featureIndex}
+                          className="flex items-center text-gray-300">
+                          <span className="w-2 h-2 bg-blue-500 rounded-full mr-3" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
+              </FadeInSection>
             ))}
           </div>
 
           {/* CTA Section */}
-          <div className="mt-20 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Build Your Online Presence?
-            </h2>
-            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              Get started with our professional web development services today
-            </p>
-            <Link
-              to="/contact"
-              className="gradient-button text-white px-8 py-4 rounded-full text-lg font-medium inline-flex items-center gap-2"
-            >
-              Get Your Free Website Consultation
-              <ArrowRight size={20} />
-            </Link>
-          </div>
+          <FadeInSection delay={800}>
+            <div className="mt-20 text-center">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Ready to Build Your Online Presence?
+              </h2>
+              <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+                Get started with our professional web development services today
+              </p>
+              <Link
+                to="/contact"
+                className="gradient-button text-white px-8 py-4 rounded-full text-lg font-medium inline-flex items-center gap-2"
+              >
+                Get Your Free Website Consultation
+                <ArrowRight size={20} />
+              </Link>
+            </div>
+          </FadeInSection>
         </div>
       </section>
     </>

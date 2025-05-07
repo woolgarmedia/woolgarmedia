@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import FadeInSection from "./FadeInSection";
 
 const Hero = () => {
   return (
@@ -18,50 +19,60 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 text-center lg:text-left">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 text-sm mb-6">
-              🚀 Professional Web Development in Oxfordshire
-            </div>
-
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-white">
-              Expert Website Design &{" "}
-              <span className="gradient-text">Development</span>
-              <br />
-              for Small Businesses
-            </h1>
-
-            <p className="text-lg text-gray-400 mb-8 max-w-2xl">
-              Transform your small business with our professional website development services. Based in Oxfordshire, we create custom, modern websites that help local businesses establish a strong online presence.
-            </p>
-
-            <Link
-              to="/contact"
-              className="gradient-button text-white px-8 py-4 rounded-full text-lg font-medium flex items-center gap-2 shadow-lg"
-            >
-              Get Your Free Website Consultation
-              <ArrowRight size={20} />
-            </Link>
-
-            <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg">
-              <div>
-                <div className="text-blue-500 text-3xl font-bold">98%</div>
-                <div className="text-gray-400 text-sm">Client Satisfaction</div>
+            <FadeInSection>
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 text-sm mb-6">
+                🚀 Professional Web Development in Oxfordshire
               </div>
-              <div>
-                <div className="text-blue-500 text-3xl font-bold">#1</div>
-                <div className="text-gray-400 text-sm">
-                  Trust Web Development Agency Oxfordshire
+            </FadeInSection>
+
+            <FadeInSection delay={200}>
+              <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-white">
+                Expert Website Design &{" "}
+                <span className="gradient-text">Development</span>
+                <br />
+                for Small Businesses
+              </h1>
+            </FadeInSection>
+
+            <FadeInSection delay={400}>
+              <p className="text-lg text-gray-400 mb-8 max-w-2xl">
+                Transform your small business with our professional website development services. Based in Oxfordshire, we create custom, modern websites that help local businesses establish a strong online presence.
+              </p>
+            </FadeInSection>
+
+            <FadeInSection delay={600}>
+              <Link
+                to="/contact"
+                className="gradient-button text-white px-8 py-4 rounded-full text-lg font-medium flex items-center gap-2 shadow-lg"
+              >
+                Get Your Free Website Consultation
+                <ArrowRight size={20} />
+              </Link>
+            </FadeInSection>
+
+            <FadeInSection delay={800}>
+              <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg">
+                <div>
+                  <div className="text-blue-500 text-3xl font-bold">98%</div>
+                  <div className="text-gray-400 text-sm">Client Satisfaction</div>
+                </div>
+                <div>
+                  <div className="text-blue-500 text-3xl font-bold">#1</div>
+                  <div className="text-gray-400 text-sm">
+                    Trust Web Development Agency Oxfordshire
+                  </div>
                 </div>
               </div>
-            </div>
+            </FadeInSection>
           </div>
 
-          <div className="flex-1">
+          <FadeInSection delay={400} className="flex-1">
             <img
               src="/images/IMG-20231201-WA0004.jpg"
               alt="Digital Marketing and SEO Services in Oxfordshire"
               className="rounded-lg shadow-2xl w-full object-cover transform -rotate-6"
             />
-          </div>
+          </FadeInSection>
         </div>
       </div>
     </section>

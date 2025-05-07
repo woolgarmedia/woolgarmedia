@@ -4,6 +4,14 @@ import { Link } from "react-router-dom";
 import FadeInSection from "./FadeInSection";
 
 const Hero = () => {
+  const scrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section
       id="home"
@@ -42,8 +50,9 @@ const Hero = () => {
 
             <FadeInSection delay={600}>
               <Link
-                to="/contact"
-                className="gradient-button text-white px-8 py-4 rounded-full text-lg font-medium flex items-center gap-2 shadow-lg"
+                to="/#contact"
+                onClick={scrollToContact}
+                className="gradient-button text-white px-8 py-4 rounded-full text-lg font-medium inline-flex items-center gap-2"
               >
                 Get Your Free Website Consultation
                 <ArrowRight size={20} />

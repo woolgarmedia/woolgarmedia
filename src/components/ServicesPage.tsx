@@ -1,7 +1,7 @@
 import React from "react";
 import { Globe, Search, Share2, BarChart3, ArrowRight } from "lucide-react";
 import SEO from "./SEO";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import FadeInSection from "./FadeInSection";
 
 const services = [
@@ -36,6 +36,20 @@ const services = [
 ];
 
 const ServicesPage = () => {
+  const navigate = useNavigate();
+
+  const scrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate('/');
+    // Use setTimeout to ensure the navigation completes before scrolling
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
   return (
     <>
       <SEO
@@ -113,7 +127,8 @@ const ServicesPage = () => {
                 Get started with our professional web development services today
               </p>
               <Link
-                to="/contact"
+                to="/#contact"
+                onClick={scrollToContact}
                 className="gradient-button text-white px-8 py-4 rounded-full text-lg font-medium inline-flex items-center gap-2"
               >
                 Get Your Free Website Consultation

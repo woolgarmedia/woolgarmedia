@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -32,10 +33,13 @@ const Hero = () => {
               Transform your small business with our professional website development services. Based in Oxfordshire, we create custom, modern websites that help local businesses establish a strong online presence.
             </p>
 
-            <button className="gradient-button text-white px-8 py-4 rounded-full text-lg font-medium flex items-center gap-2 shadow-lg">
+            <Link
+              to="/contact"
+              className="gradient-button text-white px-8 py-4 rounded-full text-lg font-medium flex items-center gap-2 shadow-lg"
+            >
               Get Your Free Website Consultation
               <ArrowRight size={20} />
-            </button>
+            </Link>
 
             <div className="mt-16 grid grid-cols-3 gap-8 max-w-lg">
               <div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Globe, Search, Share2, BarChart3, ArrowRight } from "lucide-react";
 import SEO from "./SEO";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -93,11 +94,6 @@ const ServicesPage = () => {
                       </li>
                     ))}
                   </ul>
-
-                  <button className="gradient-button text-white px-6 py-3 rounded-full text-sm font-medium inline-flex items-center gap-2">
-                    Learn More
-                    <ArrowRight size={16} />
-                  </button>
                 </div>
               </div>
             ))}
@@ -111,10 +107,13 @@ const ServicesPage = () => {
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
               Get started with our professional web development services today
             </p>
-            <button className="gradient-button text-white px-8 py-4 rounded-full text-lg font-medium inline-flex items-center gap-2">
+            <Link
+              to="/contact"
+              className="gradient-button text-white px-8 py-4 rounded-full text-lg font-medium inline-flex items-center gap-2"
+            >
               Get Your Free Website Consultation
               <ArrowRight size={20} />
-            </button>
+            </Link>
           </div>
         </div>
       </section>
